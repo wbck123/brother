@@ -1,0 +1,297 @@
+body {
+    background: #F5F6FB;
+}
+::-webkit-scrollbar{width:0;height:0}
+#ban,#ban1,#ban4,#ban2,#ban3,#ban5,#ban6{
+    width:7.5rem;
+    margin: 0 auto;
+    height:2.46rem;
+}
+#ban {
+    background: url(../newimg/banner_hkcg@2x.jpg) no-repeat center center / 100% 100%;
+}
+#ban1,#ban4 {
+    background: url(../newimg/banner_shz@2x.jpg) no-repeat center center / 100% 100%;
+}
+#ban2 {
+    background: url(../newimg/banner_sqcg@2x.jpg) no-repeat center center / 100% 100%;
+}
+#ban3 {
+    background: url(../newimg/banner_huankuan@2x.jpg) no-repeat center center / 100% 100%;
+}
+#ban5{
+    background: url(../newimg/banner_daozhang@2x.jpg) no-repeat center center / 100% 100%;
+}
+#ban6{
+   
+    background: url(../newimg/chushi_banner_shenqingzhong@2x.jpg) no-repeat center center / 100% 100%;
+}
+.center {
+    padding-top: 1.28rem;
+    width:7.5rem;
+    height:10.8rem;
+    background: url(../newimg/chushi_sy_bg_xia@2x.png) no-repeat center center / 100% 100%;
+    margin: -.8rem auto 0;
+}
+.center_one {
+    width:3.74rem;
+    height:3.9rem;
+    padding-top: 1.2rem;
+    margin:0 auto;
+}
+.center_one1 {
+    position: relative;
+    width:3.74rem;
+    height:3.9rem;
+    padding-top: 2.65rem;
+    margin:0 auto;
+}
+
+.center_one2 {
+    position: relative;
+    width:3.74rem;
+    height:3.9rem;
+    padding-top:2.5rem;
+    margin:0 auto;
+}
+.gold_da{
+   padding-top:2rem; 
+}
+.center_one3 {
+    position: relative;
+    width:3.74rem;
+    height:3.9rem;
+    padding-top: 2.65rem;
+    margin:0 auto;
+}
+.center_one4 {
+    position: relative;
+    width:3.74rem;
+    height:3.9rem;
+    padding-top: 2.65rem;
+    margin:0 auto;
+}
+.center_one5 {
+    position: relative;
+    width:3.74rem;
+    height:3.9rem;
+    padding-top: 2.65rem;
+    margin:0 auto;
+}
+.center_one5 .overdue{
+     position: absolute;
+    width:3.74rem;
+    height:3.9rem;
+    top:0;
+    left:0;
+    background: url(../newimg/shouye_yuanquan@2x.png);
+    background-size: 100% 100%;
+}
+.center_one5 .overdue img{
+    width:1.24rem;
+    height:1.28rem;
+    margin:0 auto;
+    display: block;
+    margin-top:1rem;
+
+}
+#bg_img {
+    position: absolute;
+    width:3.74rem;
+    height:3.9rem;
+    top:0;
+    left:0;
+    display: block;
+}
+.bg {
+    width:1.24rem;
+    height:1.28rem;
+    background: url(../newimg/bq_shenqingzhong@2x.png) no-repeat center center / 100% 100%;
+    margin:0 auto .2rem;
+}
+.chen {
+    width:1.24rem;
+    height:1.28rem;
+    background: url(../newimg/sadfdsf@2x.png) no-repeat center center / 100% 100%;
+    margin:0 auto .2rem;
+}
+.bg1{
+    width:1.24rem;
+    height:1.28rem;
+    background: url(../newimg/bq_shz@2x.png) no-repeat center center / 100% 100%;
+    margin:0 auto .2rem;
+}
+.bg2{
+    width:1.24rem;
+    height:1.28rem;
+    background: url(../newimg/bq_sqcg@2x.png) no-repeat center center / 100% 100%;
+    margin:0 auto .2rem;
+}
+.bg3{
+    width:1.24rem;
+    height:1.28rem;
+    background: url(../newimg/bq_huankuan@2x.png) no-repeat center center / 100% 100%;
+    margin:0 auto .2rem;
+    
+}
+.bg4{
+    width:1.24rem;
+    height:1.28rem;
+    background: url(../newimg/bq_dakuanzhong@2x.png) no-repeat center center / 100% 100%;
+    margin:0 auto .2rem;
+}
+.bg5{
+    width:1.24rem;
+    height:1.28rem;
+    background: url(../newimg/bq_daozhang@2x.png) no-repeat center center / 100% 100%;
+    margin:0 auto .2rem;
+}
+.bg6{
+   width:1.24rem;
+    height:1.28rem;
+    background: url(../newimg/chushi_bq_shenqingzhong@2x.png) no-repeat center center / 100% 100%;
+    margin:0 auto .2rem; 
+}
+.pay_all {
+    line-height:.44rem;
+    font-size:.3rem;
+    color: #2ED19F;
+    width:100%;
+    text-align: center;
+}
+
+.line{
+    line-height:0.8rem;
+}
+.again {
+    width:100%;
+    line-height:.84rem;
+    font-size:.24rem;
+    color: #2ED19F;
+    text-align: center;
+    margin-bottom: .2rem;
+}
+#again ,#again_jump {
+    width:5.9rem;
+    height:1rem;
+    margin:0 auto .6rem;
+    background-image: linear-gradient(134deg, #FCCF31 0%, #F55555 100%);
+    box-shadow: 0 3px 7px 0 rgba(204,99,38,0.40);
+    border-radius: 5px;
+    font-size:.32rem;
+    color: #ffffff;
+    line-height:1rem;
+    text-align: center;
+}
+.detail {
+    width:100%;
+    height:.34rem;
+    line-height:.34rem;
+    text-align: center;
+    font-size:.24rem;
+}
+.detail > img {
+    width:.26rem;
+    height:.2rem;
+    opacity:0.8;
+    margin-right: .1rem;
+}
+.detail >span:nth-child(2) {
+    color: #bdbdbd;
+    margin-right: .1rem;
+}
+.detail > span:nth-child(3){
+    color: #F76E1E;
+}
+/*客服电话*/
+.screen {
+    display: none;
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: #000000;
+    opacity: 0.5;
+}
+.check_phone {
+    display: none;
+    width:7.5rem;
+    height:2.36rem;
+    background: #ffffff;
+    position: fixed;
+    left:50%;
+    margin-left: -3.75rem;
+    bottom:0;
+    z-index: 999;
+}
+.check_phone > p {
+    width:100%;
+    height:1.11rem;
+    line-height:1.11rem;
+    font-size:.3rem;
+    color: #424242;
+    text-align: center;
+}
+.check_phone > p > a {
+    color: #424242;
+}
+.check_phone > div {
+    width:100%;
+    height:.16rem;
+    background: url(../newimg/375hengxian@21x.png) repeat center center ;
+}
+.tip_box{
+    width: 5.9rem;
+    height: 4.12rem;
+    background: url(../newimg/kp_shz@2x.png) no-repeat center/100%;
+    margin: .5rem auto;
+    overflow: hidden;
+}
+.tip_dakuan{
+    background: url(../newimg/kp_dkz_bg@2x.png) no-repeat center/100%;
+}
+.tip_daozhang{
+    background: url(../newimg/kp_shcg@2x.png) no-repeat center/100%;
+}
+.repaying_box{
+    background: url(../newimg/kp_hkz@2x.png) no-repeat center/100%;
+}
+.paysuccess_box{
+    background: url(../newimg/kp_hkwc@2x.png) no-repeat center/100%;
+}
+.tip_daozhang p:nth-of-type(1){
+    margin-top: 1.12rem;
+    font-size: .4rem;
+    line-height: .48rem;
+}
+.tip_daozhang .again{
+    margin-top: .64rem;
+    line-height: .34rem;
+}
+.tip_box p{
+    font-size: .24rem;
+    text-align: center;
+    margin-top: 2.72rem;
+    color: #FFF;
+}
+.tixian_tip{
+    width: 5.9rem;
+    height: 4.12rem;
+    margin: .5rem auto;
+    overflow: hidden;
+    background: url(../newimg/kp_shcg@2x.png) no-repeat center/100%;
+    padding-top: 1.25rem;
+}
+.tixian_tip p:nth-of-type(1){
+    font-size: .4rem;
+    color: #FFF;
+    margin-bottom: .8rem;
+}
+.tixian_tip p:nth-of-type(2){
+    font-size: .24rem;
+    color: #FFF;
+}
+.tip_tixianshibai{
+    background: url(../newimg/kp_txsb@2x.png) no-repeat center/100%;
+}

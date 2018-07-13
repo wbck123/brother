@@ -1,0 +1,126 @@
+body{-webkit-text-size-adjust: none!important;text-size-adjust: 100% !important;
+	-moz-text-size-adjust: 100% !important;}
+a,button,input,textarea{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	border:none;
+	outline-style:none;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance: none;
+}
+.header{
+	width:7.5rem;
+	height:0.88rem;
+	background-image:url(../newimg/header_bg.jpg);
+	background-size: 100% 100%;
+	line-height: 0.88rem;
+	text-align:center;
+	position: relative;
+	margin:0 auto;
+	font-size: 0.3rem;
+	color:#fff;
+}
+
+
+.header span{
+	width:0.8rem;
+	height:0.6rem;
+	position:absolute;
+}
+.header .back{
+	width:0.8rem;
+	height:0.6rem;
+	position:absolute;
+	left:0.2rem;
+	top:0.14rem;
+}
+.header .set{
+	right:0.2rem;
+	top:0.14rem;
+}
+.header .apper{
+	width:2.72rem;
+	height:2rem;
+	position: absolute;
+	z-index: 1111;
+	background:url(../newimg/chushi_sy_candan@2x.png);
+	background-size: 100% 100%;
+	right:0.13rem;
+	top:0.88rem;
+	display: none;
+}
+.header .apper p{
+	width:100%;
+	height:0.9rem;
+}
+.header .apper p:nth-of-type(1){
+	padding-top:0.1rem;
+	height:1rem;
+}
+.header .apper p:nth-of-type(1) a{
+	display: block;
+	width:100%;
+	height:100%;
+}
+.mark{
+	width:100%;
+	height:100%;
+	position: fixed;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,0.5);
+	display: none;
+	z-index:33;
+}
+.mark .points{
+	width:5.40rem;
+	height:4.6rem;
+	background: #fff url(../newimg/tip_icon.png) no-repeat center .54rem/1.44rem 1.44rem;
+	border-radius: .26rem;
+	position: absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom: 0;
+	margin:auto;
+	z-index: 2222;
+}
+.mark h2{
+	font-size: .34rem;
+	text-align: center;
+	margin: 2.3rem 0 .48rem;
+	color: #F76E1E;
+	font-weight: normal;
+}
+.mark .points p{
+	width:2rem;
+	height:0.8rem;
+	border: 1px solid #F76E1E;
+	border-radius: 5px;
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #F76E1E;
+	position: absolute;
+	bottom:0.4rem;
+}
+.mark .points p:nth-of-type(1){
+	left:0.4rem;
+}
+.mark .points p:nth-of-type(2){
+	right:0.4rem;
+}
+.header_bg{
+    width:100%;
+	height:100%;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:22;
+	cursor: pointer;
+
+}
+#borrow{
+	background-image:url(../newimg/daohang_wufaui@2x.png);
+	background-size: 100% 100%;
+}

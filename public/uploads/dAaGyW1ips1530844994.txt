@@ -1,0 +1,10 @@
+@extends('common.admin')
+@section('content')
+<!-- 右侧主体开始 -->
+
+<!-- 右侧主体结束 -->
+ @endsection
+
+@section('js')
+ 
+@endsection
