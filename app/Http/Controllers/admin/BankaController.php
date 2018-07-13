@@ -53,8 +53,9 @@ class BankaController extends Controller
      //记录删除
     public function weitongguo(Request $request)
     {
+ 
     	$id = $request->all();
-
+        dd($id);die;
     	$res = \DB::table('record')->where('id',$id)->update(['status'=>1]);
 
     	if ($res) {

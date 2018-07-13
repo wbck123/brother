@@ -12,7 +12,7 @@ class UserController extends Controller
 	{
         $id = $request->session()->get('id');
 		$help = DB::table('service')->where('id',6)->first();
-		$users = DB::table('user')->where('nick', '老梁')->first();
+		$users = DB::table('user')->where('id', $id)->first();
 		// dd($help);die;
 		return view('home.user.index',['help'=>$help,'users'=>$users,'id'=>$id]);
 	}

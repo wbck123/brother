@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\library\Ucpaas;
 class TestController extends Controller
 {
     public function test()
@@ -12,6 +12,15 @@ class TestController extends Controller
     	return view('home.index.test');
     }
 
+
+    public function yzm(Request $request)
+    {
+        
+      dd($request->all());
+
+
+
+    }
     public function upload(Request $request)
     {
 

@@ -31,19 +31,12 @@
 		<a href="/user/separate"><li><i></i>收益明细<span class="right"></span></li></a>
 		<a href="/user/cashrecord/1"><li><i></i>提现记录<span class="right"></span></li></a>
 		<a href="/bank"><li><i></i>我要办卡<span class="right"></span></li></a>
-		<a href="javascript:;" onclick="Out();" class="loginout"><li><i></i>退出登录<span class="right"></span></li></a>	</ul>
+		<a href="/loginout" class="loginout"><li><i></i>退出登录<span class="right"></span></li></a>	</ul>
 </div>
 <script>
 	function checkUser(){
 		var herf = "/user/cash";
 		location.href="/user/cash";
-	}
-	function Out(){
-		var url = "/loginout";
-		salert("是否确定退出？",1,function(){
-			location.href=url;
-		});
-		
 	}
 </script>
 @endsection

@@ -1,96 +1,31 @@
-<!doctype html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>Laravel</title>
-
-        <link rel="stylesheet" href="/admins/layui/css/layui.css">
-	<style>
-		.top{
-			padding-top: 100px;
-		}
-	</style>
-    </head>
-    <body>
-
-<button type="button" class="layui-btn layui-btn-danger" id="test7"><i class="layui-icon"></i>上传图片</button>
-<div class="layui-inline layui-word-aux">
-  这里以限制 60KB 为例
-</div>
-
-
-
-<div class="layui-upload">
-  <button type="button" class="layui-btn" id="test1">上传图片</button>
-  <div class="layui-upload-list">
-    <img class="layui-upload-img" id="demo1">
-    <p id="demoText"></p>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+  <title>云之讯 - 验证短信测试Demo</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+ </head>
+<body style="background-color:#48c690">
+<br>
+<p style="text-align:center"><b>测试短信验证码</b></p>
+<p style="text-align:center;color:#FF0000">测试前，请先阅读《请先读我（重要）.doc》并配置好相应参数,<a href="http://docs.ucpaas.com/doku.php?id=error_code" target="black">点击查看错误码</a></p>
+  <div style="margin:0 auto;width:350px;height:150px">
+    <form id="myForm" action="/yzm" method="post">
+      <table>
+        <tr>
+          <td>接收短信的手机号: </td>
+          <td><input type="text" name="yzmtel" size="20" style="margin-right:0px"> </td>
+        </tr>
+        <tr>
+          <td>验证码: </td>
+          <td><input type="text" name="yzm" size="20" style="margin-right:0px"></td>
+        </tr>
+        <tr>
+          {{csrf_field()}}
+          <td><a href="#" onclick="document.getElementById('myForm').submit();"></td>
+          <td><input type="submit" value="提交测试" style="margin-left: 0px;width:100px;"/></td>
+        </tr>
+      </table>
+    </form>
   </div>
-</div>  
-
-
-    </body>
-    <script src="/admins/layui/layui.js"></script>
-    <script>
-
-
-layui.use('upload', function(){
-      var $ = layui.jquery
-      ,upload = layui.upload;
-  var uploadInst = upload.render({
-    elem: '#imgupload'
-    ,url: '/upload'
-    ,field:'photo'
-    ,headers: {
-         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-      }
-    ,before: function(obj){
-      obj.preview(function(index, file, result){
-        $('#demo1').attr('src', result);
-
-        console.log(obj.ResultData);
-      });
-    }
-    ,done: function(res){
-      if(res.code > 0){
-        return layer.msg('上传失败');
-      }
-    }
-    ,error: function(){
-      var demoText = $('#demoText');
-      demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
-      demoText.find('.demo-reload').on('click', function(){
-        uploadInst.upload();
-      });
-    }
-  });
-
-
-
-
-
-
-
-
-
-
-
-    upload.render({
-    elem: '#test7'
-    ,url: '/upload'
-    ,field:'photo'
-    ,size: 60 //限制文件大小，单位 KB
-    ,headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-            }
-    ,done: function(res){
-      console.log(res)
-    }
-  });
-});
-
-    </script>
+</body>
 </html>

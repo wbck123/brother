@@ -40,6 +40,7 @@ class IndexController extends Controller
     }
     public function session()
     {
+
     	$res = \DB::table('user')->where('id',19)->first();
 
     	session(['id'=>$res->id]);

@@ -1,159 +1,167 @@
 
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta content="telephone=no" name="format-detection">
-    <meta content="email=no" name="format-detection">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="/home/css/reset1.css" />
-     <link rel="stylesheet" type="text/css" href="/home/css/header.css">
-     <link rel="stylesheet" type="text/css" href="/home/css/payend.css">
-    <link rel="stylesheet" type="text/css" href="/home/css/login.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no"> 
+    <title>账号注册</title>
+  <link rel="stylesheet" href="/admins/layui/css/layui.css">
+  <link rel="stylesheet" href="/admins/css/style.css">
     <script src="/admins/layui/layui.js"></script>
-    <script src="/admins/layui/css/layui.css"></script>
-   <style type="text/css" media="screen">
-   /*邀请有礼活动弹框css*/
-    .tan_box{
-         width: 90%;
-        height: 5.2rem;
-        background: #FFF;
-        border-radius: .1rem;
-        position: fixed;
-        z-index: 999;
-        top: 50%;
-        left: 5%;
-        margin-top: -2.83rem;
-        text-align: center;
-        box-sizing: border-box;
-        padding: 0 10%;
-        display: none;
-    }
-    .tan_box p{
-         width: 100%;
-        margin: 1rem auto;
-        font-size: 0.28rem;
-        color: #323232;
-        line-height: .55rem;
-    }
-    .tan_box>div{
-      width: 100%;
-      overflow: hidden;
-    }
-    .tan_box a{
-         width: 40%;
-        height: .95rem;
-        box-sizing: border-box;
-        border-radius: 800px;
-        line-height: .95rem;
-        font-size: .3rem;
-    }
-    .tan_box a:first-child{
-         color: #FF6060;
-        float: left;
-        margin-left: 5%;
-        border: 1px solid #FF6060;
-    }
-    .tan_box a:last-child{
-         float: right;
-        color: #FFF;
-        background: #FF6060;
-        margin-right: 5%;
-    }
-  </style>
-    <title>登录</title>
+<meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="http://www.17sucai.com/preview/292087/2018-03-07/H5%E6%B3%A8%E5%86%8C/css/amazeui.min.css">
+
+    <style>
+        html { font-size: 10px; }
+        html,body { background-color: #f0eff4; }
+        body { padding-bottom: 0;margin: 0;}
+        * { padding: 0;margin: 0; }
+        header {position: fixed;top: 0;left: 0;z-index: 999;width: 100%;height: 49px; background-color: #333; color: #fff;}
+        header .back { position: absolute;top: 0;left: 0; display: inline-block;padding-left: 5px; font-size: 30px; }
+        header p { margin: 0;line-height: 49px; font-size: 16px;text-align: center; }
+        .register { padding: 8px 6px; font-size: 14px;}
+        .res-item {position: relative;  width: 100%; border-radius: 4px; margin-bottom: 8px;background-color: #fff; }
+        .res-icon {position: absolute;left: 8px;top: 5px;z-index: 100; display: inline-block;font-size: 18px;color: #9c9c9c; }
+        .res-item .input-item {display: inline-block;width: 100%;padding-left: 31px;height: 40px;border: none; font-size: inherit;}
+        .res-item .input-item:focus { 
+            outline-offset: 0;
+            outline: -webkit-focus-ring-color auto -2px;
+            background-color: #fefffe;
+            border: 1px solid #e21945;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(226,25,69,.3);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(226,25,69,0.3);
+        }
+        .res-item .input-item:focus + .res-icon { color: #e21945; }
+        .yanzhengma {position: absolute;right: 10px;top: 5px; z-index: 100;  display: inline-block;padding: 0.5rem 0.8rem;font-size: 14px; border: none;background-color: #e21945;color: #fff;border-radius: 8px; }
+        .yanzhengma:disabled { background-color: #ddd; }
+        .res-btn { margin-top: 10px;padding: 0 5px; }
+        .res-btn button {  background-color: #e21945;font-size: 14px; color: #fff;border-radius: 8px; }
+        .res-btn button:focus { color: #fff; }
+    </style>
 </head>
 <body>
-    <div class="warp">
-         <div class='denglu'>
-          <!--邀请有礼活动新增-->
-         <input type="hidden" id="getId" value="">
-         <input type="hidden" id="getfrom" value=""> 
-
-               
-         <div class="tu"><img src="/home/images/dl_banner@2x.png"/></div>
-         <div class="biaodan">
-            <p>
-              <input type="tel" class="phone" name="phone" id="mobile" placeholder="请输入11位手机号码">
-            </p>
-            <p>
-             <span class="yan"><input type="tel" class="duanxin" placeholder="请输入短信验证码" name='code' id="mobile_code" style="width:72%"  pattern="[0-9]*"></span>
-             <span class="anniu"><input type="button" id="btn" class="input"  value="获取验证码"/></span>
-             
-            </p>
-         </div> 
-         <div class="agree">
-            <span class="input"><input type="checkbox" name="check" id="for" class="input_check" checked="checked"><label for="for"></label></span>&nbsp我已同意并注册 <span class="server"><a href="/mobile/index.php/twologin/reg_protocol">《服务协议》</a></span>          
+    <!--[if lte IE 9]>
+    <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+      href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+      以获得更好的体验！</p>
+    <![endif]-->
+   <div class="tu"><img src="/home/images/dl_banner@2x.png" width="100%" /></div>
+    <div class="register">
+        <div class="res-item">
+            <input type="hidden" name="id" value="{{$id}}">
+            <input type="tel" name="tel" placeholder="手机号" class="input-item mobile">
+            <i class="res-icon am-icon-phone"></i>
         </div>
-        <input type='button' value="立即登录" class="deng" id="deng">
-        <p class="detail"><img src="/home/images/dianhua@2x.png" alt="图片"><span>如有疑问请咨询客服</span><span onclick="phone()">18904970363</span></p>
+        <div class="res-item">
+            
+            <input type="text" placeholder="验证码"  name="code" class="input-item yanzheng">
+            <i class="res-icon am-icon-mobile"></i>
+            <button type="button"  class="yanzhengma">发送验证码</button>
+        </div>
+        <div class="res-btn">
+            <button type="button" id="res-btn" class="am-btn am-btn-block">立即注册</button>
         </div>
     </div>
- <script>
-	layui.use(['jquery', 'layer'], function(){ 
-	  var $ = layui.$ 
-	  ,layer = layui.layer;
-	  
-	 	//检查手机号
-	 	$('#btn').click(function(){
-		 	var tel = $('input[name=phone]').val();
 
-				 var phoneReg = /^1[3456789]\d{9}$/;
-				 if( tel == "" ){
-				 	layer.msg('手机号不能为空');
-				 	return false;
-				 } 
-			      if(!phoneReg.test(tel)){
-			        layer.msg('请输入有效的手机号码');
-			        return false;
-			      }
-		//发送Ajax
-    $.ajaxSetup({
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="/static/wechatMember/js/amazeui.ie8polyfill.min.js"></script>
+    <![endif]-->
+    <script>
+
+      
+//获取验证码
+layui.use(['jquery','layer'], function(){
+  var $ = jQuery = layui.$;
+$.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-		$.ajax({
-	          type : "POST",
-	          url : "/register/yzm",
-	          data : {tel:tel},
-	          cache : false,
-	          dataType : "json",
-	          beforeSend : function() {
-	          },
-	          success : function(msg) {
-	          	if(msg ==1 ){
-	          	// if(msg.info==2){
-	          	// 	settime(59);
-	          	layer.msg('发送成功');
-	          	  }else{
-	          	  	layer.msg('发送失败');
-	          	  }
-	          }
-		     });
-			return false;
-	 	});
 
-	    function settime(){
-			$('#btn').attr("disabled","disabled");
-			var time=59;
-			var timer=setInterval(function(){
-				var temp=time--;
-				$('#btn').attr("value",""+temp+"秒后重新获取");
-				if(temp<=0){
-					$('#btn').removeAttr("disabled");
-					$('#btn').attr("value","获取验证码");
-					clearInterval(timer);
-					return
-				}
-			},1000)
-	    }
-});
-</script>
+//获取验证码
+   $('.yanzhengma').on('click',function(){
+
+    var tel = $('input[name=tel]').val();
+
+    if(tel == ""){
+
+      layer.msg('手机号码不能为空');
+
+        return false;
+    }
+
+    var phoneReg = /^1[3456789]\d{9}$/; 
+
+      if(!phoneReg.test(tel)){
+
+        layer.msg('手机号码格式错误');
+
+        return false;
+
+      }
+
+       var times = 200;
+                function roof(){
+                    if(times == 0){
+                        $('.yanzhengma').text('发送验证码('+times+'s)');
+                        $('.yanzhengma').prop('disabled',false);
+                        $('.yanzhengma').text('发送验证码');
+                        times = 10;
+                        return
+                    }
+                    $('.yanzhengma').text('发送验证码('+times+'s)');
+                    times--;
+
+                    setTimeout(roof,1000);
+                }
+            $(this).prop('disabled',true);
+            roof();
+
+                $.post('/yzm',{tel:tel},function(data){
+                       if(data ==1){
+                          layer.msg('发送成功');
+                       }else{
+                        layer.msg('发送失败');
+                       }
+                   })
+            });
+
+//确认注册
+//
+      
+    $('#res-btn').on('click',function(){
+
+      var tel = $('input[name=tel]').val();
+      var code = $('input[name=code]').val();
+      var id = $('input[name=id]').val();
+      if(code == ""){
+        layer.msg('验证码不能为空!');
+      }
+ 
+          $.post('/doregister',{tel:tel,code:code,id:id},function(data){
+                   if(data ==2){
+                      layer.msg('登录成功');
+                      window.location.href = "/user";
+                   }else if(data ==3){
+                      layer.msg('验证码错误');
+                   }else{
+                    layer.msg('注册失败');
+                   }
+               });
+          })
+  })
+
+    </script>
+
 </body>
-
 </html>

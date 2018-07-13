@@ -231,6 +231,7 @@ return [
 
     ],
  
-    'path'=>'/uploads/'
+    'path'=>'/uploads/',
+    'url'=>'http://jinrong.ezhongheng.com/',
 
 ];

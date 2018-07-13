@@ -41,14 +41,14 @@
   <div class="layui-side layui-bg-black">
     <div class="layui-side-scroll">
       <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-        <li class="layui-nav-item layui-nav-itemed">
+        <li class="layui-nav-item">
           <a class="" href="javascript:;"><i class="layui-icon">&#xe614;</i><cite>&nbsp;权限管理</cite></a>
           <dl class="layui-nav-child">
             <dd><a href="/admin/auth/create"><i class="layui-icon">&#xe623;</i>管理员添加</a></dd>
             <dd><a href="/admin/auth/"><i class="layui-icon">&#xe623;</i>管理员列表</a></dd>
           </dl>
         </li>
-      <li class="layui-nav-item layui-nav-itemed">
+      <li class="layui-nav-item">
           <a class="" href="javascript:;"><i class="layui-icon">&#xe614;</i><cite>&nbsp;导航管理</cite></a>
           <dl class="layui-nav-child">
             <dd><a href="/admin/nav/create"><i class="layui-icon">&#xe623;</i>导航添加</a></dd>
